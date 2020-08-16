@@ -1,16 +1,17 @@
-class Umbrella{
+class Umbrella {
     constructor(x,y){
-var options={
-    isStatic:true
-}
-this.boy= loadImage("3.png")
-this.umbrella= Bodies.circle(x,y,50,options)
-this.radius=50
-World.add(world,this.umbrella)
+        var options = {
+            isStatic: true,
+        }
+        this.image = loadImage("3.png");
+        this.umbrella = Bodies.circle(x,y,50,options);
+        this.radius = 50;
+        World.add(world, this.umbrella)
     }
-display(){
-    imageMode(CENTER)
-    image(this.boy,this.umbrella.position.x, this.umbrella.position.y,300,300)
 
-}
+    display(){
+        var pos = this.umbrella.position;
+        imageMode(CENTER);
+        image(this.image,pos.x,pos.y+70,300,300);
+    }
 }
